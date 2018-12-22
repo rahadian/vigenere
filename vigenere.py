@@ -1,12 +1,14 @@
-# import string
+#python challenge
+#vigenere cipher
+#rahadian arya
+
 from string import ascii_lowercase
 import itertools  
 import numpy as np
 
-
 key = "cipher"
 keytoarray = key.split()
-input = raw_input('Masukkan kata : ')
+input = raw_input('Enter the lowercase word (without space) : ')
 inputarray = input.split(" ")
 alpatoarray = map(chr, range(97, 123))
 numtoarray = map(int,range(0,26))
@@ -17,12 +19,14 @@ index = alpatoarray.index("b")
 
 for i in alpatoarray:
     x = alpatoarray.index(i)
-    print i," bernilai",x
+    print i," =",x
 
 for a in numtoarray:
     x = alpatoarray[a]
-    print a," bernilai",x 
+    print a," =",x 
 
+print "\r"
+print "Arithmetic Substitution"
 for (z,k) in zip(input,itertools.cycle(key)):
     hasil = alpatoarray.index(z)+alpatoarray.index(k)
     # hasilarray = hasil.split("\r")
@@ -38,7 +42,7 @@ for (m,n) in zip(input,itertools.cycle(key)):
     hasilarray = np.asarray(hasil)
     print hasilarray,'=',alpatoarray[hasilarray]
 print "\r"
-print "jadi chipertextnya ",
+print "Chipertext ",
 print "\r"
 for (m,n) in zip(input,itertools.cycle(key)):
     hasil = alpatoarray.index(m)+alpatoarray.index(n)
