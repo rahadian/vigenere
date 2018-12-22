@@ -7,7 +7,7 @@ import numpy as np
 key = "cipher"
 keytoarray = key.split()
 # plain = "Universitas Airlangga"
-input = raw_input('Masukkan kata dengan menggunakan spasi: ')
+input = raw_input('Masukkan kata : ')
 inputarray = input.split(" ")
 alpatoarray = map(chr, range(97, 123))
 numtoarray = map(int,range(0,26))
