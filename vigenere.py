@@ -23,12 +23,6 @@ for i in alpatoarray:
 for a in numtoarray:
     x = alpatoarray[a]
     print a," bernilai",x 
-# print input,'=',alpatoarray.index(input)
-
-# for k in key:
-#     print k
-#     alpatoarray.index(k)
-    # print k,'=',alpatoarray.index(k)
 
 for (z,k) in zip(input,itertools.cycle(key)):
     hasil = alpatoarray.index(z)+alpatoarray.index(k)
@@ -36,7 +30,7 @@ for (z,k) in zip(input,itertools.cycle(key)):
     if hasil > 26:
         hasil = alpatoarray.index(z)+alpatoarray.index(k)-26
     print z,'=',alpatoarray.index(z),"+",k,'=',alpatoarray.index(k),'=',hasil
-print "jadi hasilnya ",
+
 print "\r"
 for (m,n) in zip(input,itertools.cycle(key)):
     hasil = alpatoarray.index(m)+alpatoarray.index(n)
@@ -44,8 +38,16 @@ for (m,n) in zip(input,itertools.cycle(key)):
         hasil = alpatoarray.index(m)+alpatoarray.index(n)-26
     hasilarray = np.asarray(hasil)
     print hasilarray,'=',alpatoarray[hasilarray]
-
-    # index = [hasilarray]
+print "\r"
+print "jadi chipertextnya ",
+print "\r"
+for (m,n) in zip(input,itertools.cycle(key)):
+    hasil = alpatoarray.index(m)+alpatoarray.index(n)
+    if hasil > 26:
+        hasil = alpatoarray.index(m)+alpatoarray.index(n)-26
+    hasilarray = np.asarray(hasil)
+    strhasil = str(alpatoarray[hasilarray])
+    print strhasil.rstrip(),
     
     
 
